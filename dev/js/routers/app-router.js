@@ -3,7 +3,9 @@ define([
 ], function(Marionette) {
     return Backbone.Marionette.AppRouter.extend({
         appRoutes: {
-           '': 'index'
+           '':                                      'index',
+           'repos/:owner/:repo/issues':             'showIssuesList',
+           'repos/:owner/:repo/issues/:number':     'showIssue'
         }
     });
 });

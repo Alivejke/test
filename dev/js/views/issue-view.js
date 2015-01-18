@@ -1,6 +1,6 @@
 define([
     'app',
-    'text!templates/issues-list-item.html',
+    'text!templates/issue.html',
 
     'marionette'
 ], function (
@@ -8,8 +8,8 @@ define([
     issuesListItemTpl
 ) {
     return Backbone.Marionette.ItemView.extend({
-        className: 'issues_table_item',
-        tagName: 'tr',
+        className: 'issue',
+        tagName: 'ul',
 
         template: _.template(issuesListItemTpl),
 
