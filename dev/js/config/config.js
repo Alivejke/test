@@ -2,13 +2,14 @@ requirejs.config({
 
     baseUrl: './js/',
 
-    // urlArgs: 'v=' + (new Date()).getTime(),
+    urlArgs: 'v=' + (new Date()).getTime(),
 
     paths: {
         'jquery':                 'vendor/jquery.min',
         'underscore':             'vendor/lodash.underscore.min',
         'backbone':               'vendor/backbone',
         'marionette':             'vendor/backbone.marionette.min',
+        'backbone.modelbinder':   'vendor/backbone.modelbinder.min',
         'backbone.wreqr':         'vendor/backbone.wreqr.min',
         'backbone.babysitter':    'vendor/backbone.babysitter.min',
         'text':                   'vendor/text'
@@ -23,6 +24,10 @@ requirejs.config({
         marionette: {
             deps: ['underscore', 'backbone', 'jquery', 'backbone.wreqr', 'backbone.babysitter'],
             exports: 'Marionette'
+        },
+
+        'backbone.modelbinder': {
+            deps: ['backbone']
         }
     }
 });

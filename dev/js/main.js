@@ -5,12 +5,12 @@ require([
 ], function (
     AppRouter, 
     AppController,
-    App
+    app
 ) {
 
-    App.appRouter = new AppRouter({
+    app.appRouter = new AppRouter({
         controller: new AppController()
     });
 
-    App.start();
+    app.start();
 });

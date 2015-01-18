@@ -3,15 +3,17 @@ define([
 ], function (
     Marionette
 ) {
-    var App = new Backbone.Marionette.Application();
+    var app = new Backbone.Marionette.Application();
 
-    App.addInitializer(function () {
+    app.addInitializer(function () {
         Backbone.history.start({pushState: true});
     });
 
-    App.addRegions({
+    app.addRegions({
         contentRegion: '#content'
     });
 
-    return App;
+    app.baseUrl = 'https://api.github.com/';
+
+    return app;
 });
